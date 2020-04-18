@@ -59,7 +59,7 @@ input{
 .body{
     display: flex;
     flex: 1;
-    min-height: 568px;
+    min-height: calc(100vh - 221px);
 }         
 .nav{
     flex-direction: column;
