@@ -1,0 +1,148 @@
+a{
+    text-decoration: none;
+}
+a:link{
+    color:lightseagreen
+}
+a:hover{
+    color:black;
+}
+a:visited{
+    color:lightseagreen;
+}
+a:active{
+    color:red;
+}
+.header a:link{
+    color:dimgrey
+}
+.header a:hover{
+    color:dimgrey;
+}
+.header a:visited{
+    color: dimgrey;
+}
+.header a:active{
+    color:dimgrey;
+}
+.container{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: column;
+    font-family: 'STXiHei','Courier New', Courier, monospace;
+    background-color: whitesmoke;
+}
+input{
+    background-color: whitesmoke;
+}
+.memo{
+    flex: 1;
+    line-height: 35px;
+    background-color:steelblue;
+    
+}
+.memo-item{
+    margin: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+.header{
+    flex: 1;
+}   
+.header-item{
+    margin: 40px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+}
+.body{
+    display: flex;
+    flex: 1;
+    min-height: 568px;
+}         
+.nav{
+    flex-direction: column;
+    flex: 0 0 16em;
+}
+.nav-item{
+    flex: 1;
+    margin: 5px 5px;
+    text-align: left;
+    line-height: 18px;
+    font-size: 16px;
+}
+.nav-title{
+    flex: 1;
+    margin: 5px 5px;
+    text-align: left;
+    line-height: 22px;
+    font-size: 20px;
+}
+.content{
+    margin: 5px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.content-gap{
+    margin: 25px 0px;
+    line-height: 26px;
+}
+.content-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 0px;
+}
+.content-item-row-date{
+    flex: 1; 
+    text-align: right;
+    margin-right: 20px;
+    line-height: 22px;
+    font-size: 18px;    
+    color: slategray;
+}
+.content-item-row{
+    flex: 1; 
+    text-align: center;
+    line-height: 22px;
+    font-size: 18px;    
+    color: slategray;
+}
+.content-item-row-title{
+    flex: 1; 
+    text-align: left;
+    margin-left: 20px;
+    line-height: 22px;
+    font-size: 18px;    
+    color: slategray;
+}
+.content-item-row-item{
+    display: block;
+    margin: 0px 15px;
+    text-align: center;  
+    color: slategray;
+}
+.ads{
+    flex-direction: column;
+    flex: 0 0 16em;
+}
+.footer{
+    flex: 1;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column;
+        flex: 1;
+    }
+    .nav,
+    .ads,
+    .content {
+        flex: auto;
+    }
+}

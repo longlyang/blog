@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="memo">
+                <span class="memo-item">
+                    永远保持一颗热泪盈眶的心
+                </span>
+            </div>
+            <div class="header" id="header">
+                <span class="header-item">
+                    <!--gap -->
+                </span>
+                <span class="header-item">
+                    <!--gap -->
+                </span>
+                <span class="header-item">
+                    <a  href="javascript:void(0);" v-on:click="index" >主页<i class="fa fa-home"></i></a>
+                </span>
+                <span class="header-item">
+                    <!--gap -->
+                </span>
+                <span class="header-item">
+                    <!--gap -->
+                </span>
+                <span class="header-item">
+                    <a  href="javascript:void(0);" v-on:click="note" >备忘录<i class="fa fa-sticky-note"></i></a>
+                </span>
+                <span class="header-item">
+                    <a  href="javascript:void(0);" v-on:click="post" >随笔<i class="fa fa-th-list"></i></a>
+                </span>
+                <span class="header-item">
+                    <a  href="javascript:void(0);" v-on:click="code" >代码<i class="fa fa-code"></i></a>
+                </span>
+                <span class="header-item">
+                    <a  href="javascript:void(0);" v-on:click="about" >关于作者<i class="fa fa-bath"></i></a>
+                </span>
+                <span class="header-item">
+                    <!--gap -->
+                </span>
+                <span class="header-item" id="searchinput" >
+                    <input type="text" v-model="keywords" placeholder="请输入关键词" style="height: 22px;font-size:14px;"> <a href="javascript:void(0);" v-on:click="search" ><i class="fa fa-search"></i></a>
+                </span>
+            </div>
+            <div class="body">
+                <div class="nav">
+                    <!--gap-->
+                </div>
+                <div class="content">
+                    <!--to be filled-->
+                </div>
+                <div class="ads">
+                    <!--gap-->
+                </div>
+            </div>
+            <div class="footer">
+                ALL RIGHT RESERVED @long
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        var header = new Vue({
+            el: '#header',
+            data:{
+                keywords: ''
+            },
+            methods:{
+                index: function(event){
+                    console.log("index clicked!");
+                },
+                note: function(event){
+                    console.log("note clicked!");
+                    window.location.href="./note/index.html"
+                },
+                code: function(event){
+                    console.log("code clicked!");
+                    window.location.href="./code/index.html"
+                },
+                post: function(event){
+                    console.log("post clicked!");
+                    window.location.href="./post/index.html"
+                },
+                about: function(event){
+                    console.log("about clicked!");
+                    window.location.href="./about.html"
+                },
+                search: function (event) {
+                // `this` inside methods points to the Vue instance
+                    window.location.href="https://www.bing.com/search?q="+this.keywords+" site%3Alocalhost.biz" ;
+                }
+            }
+        });
+    </script>
+
+</html>
